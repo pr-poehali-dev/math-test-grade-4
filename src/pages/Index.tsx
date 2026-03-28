@@ -6,14 +6,58 @@ type Page = "home" | "profile" | "progress" | "courses" | "lessons" | "contacts"
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/359dc848-dbf4-4d0b-a7ab-33385e097d96/files/6c8be642-9d1b-4cde-9932-8ea434691543.jpg";
 const COURSES_IMAGE = "https://cdn.poehali.dev/projects/359dc848-dbf4-4d0b-a7ab-33385e097d96/files/232f0038-8b5d-4860-a005-af52cbd4204c.jpg";
 
-const courses = [
-  { id: 1, title: "Математика", level: "Базовый", lessons: 24, progress: 65, color: "#a855f7", emoji: "🧮" },
-  { id: 2, title: "Физика", level: "Средний", lessons: 18, progress: 40, color: "#00f5ff", emoji: "⚛️" },
-  { id: 3, title: "История", level: "Базовый", lessons: 30, progress: 80, color: "#f72585", emoji: "📜" },
-  { id: 4, title: "Программирование", level: "Продвинутый", lessons: 42, progress: 20, color: "#39ff14", emoji: "💻" },
-  { id: 5, title: "Английский", level: "Средний", lessons: 36, progress: 55, color: "#ff6b35", emoji: "🌍" },
-  { id: 6, title: "Биология", level: "Базовый", lessons: 22, progress: 90, color: "#a855f7", emoji: "🌱" },
-];
+const allCourses: Record<string, { id: number; title: string; level: string; lessons: number; progress: number; color: string; emoji: string }[]> = {
+  "4": [
+    { id: 1, title: "Математика", level: "4 класс", lessons: 20, progress: 65, color: "#a855f7", emoji: "🧮" },
+    { id: 2, title: "Русский язык", level: "4 класс", lessons: 24, progress: 50, color: "#f72585", emoji: "✏️" },
+    { id: 3, title: "Окружающий мир", level: "4 класс", lessons: 18, progress: 80, color: "#39ff14", emoji: "🌍" },
+    { id: 4, title: "Литература", level: "4 класс", lessons: 16, progress: 40, color: "#ff6b35", emoji: "📖" },
+    { id: 5, title: "Английский", level: "4 класс", lessons: 22, progress: 30, color: "#00f5ff", emoji: "🗣️" },
+    { id: 6, title: "ИЗО", level: "4 класс", lessons: 12, progress: 90, color: "#f72585", emoji: "🎨" },
+  ],
+  "5": [
+    { id: 1, title: "Математика", level: "5 класс", lessons: 28, progress: 55, color: "#a855f7", emoji: "🧮" },
+    { id: 2, title: "Русский язык", level: "5 класс", lessons: 30, progress: 45, color: "#f72585", emoji: "✏️" },
+    { id: 3, title: "История", level: "5 класс", lessons: 20, progress: 70, color: "#ff6b35", emoji: "📜" },
+    { id: 4, title: "Природоведение", level: "5 класс", lessons: 18, progress: 60, color: "#39ff14", emoji: "🌿" },
+    { id: 5, title: "Английский", level: "5 класс", lessons: 26, progress: 35, color: "#00f5ff", emoji: "🗣️" },
+    { id: 6, title: "Технология", level: "5 класс", lessons: 14, progress: 80, color: "#f72585", emoji: "🔧" },
+  ],
+  "6": [
+    { id: 1, title: "Алгебра", level: "6 класс", lessons: 32, progress: 40, color: "#a855f7", emoji: "📐" },
+    { id: 2, title: "Геометрия", level: "6 класс", lessons: 24, progress: 30, color: "#00f5ff", emoji: "📏" },
+    { id: 3, title: "История", level: "6 класс", lessons: 22, progress: 75, color: "#f72585", emoji: "📜" },
+    { id: 4, title: "Биология", level: "6 класс", lessons: 20, progress: 55, color: "#39ff14", emoji: "🌱" },
+    { id: 5, title: "Английский", level: "6 класс", lessons: 30, progress: 50, color: "#ff6b35", emoji: "🗣️" },
+    { id: 6, title: "Информатика", level: "6 класс", lessons: 18, progress: 20, color: "#a855f7", emoji: "💻" },
+  ],
+  "7": [
+    { id: 1, title: "Алгебра", level: "7 класс", lessons: 36, progress: 35, color: "#a855f7", emoji: "📐" },
+    { id: 2, title: "Физика", level: "7 класс", lessons: 28, progress: 45, color: "#00f5ff", emoji: "⚛️" },
+    { id: 3, title: "История", level: "7 класс", lessons: 24, progress: 60, color: "#f72585", emoji: "📜" },
+    { id: 4, title: "Биология", level: "7 класс", lessons: 22, progress: 50, color: "#39ff14", emoji: "🌱" },
+    { id: 5, title: "Химия", level: "7 класс", lessons: 20, progress: 25, color: "#ff6b35", emoji: "🧪" },
+    { id: 6, title: "Английский", level: "7 класс", lessons: 32, progress: 55, color: "#00f5ff", emoji: "🗣️" },
+  ],
+  "8": [
+    { id: 1, title: "Алгебра", level: "8 класс", lessons: 40, progress: 30, color: "#a855f7", emoji: "📐" },
+    { id: 2, title: "Физика", level: "8 класс", lessons: 32, progress: 40, color: "#00f5ff", emoji: "⚛️" },
+    { id: 3, title: "Химия", level: "8 класс", lessons: 26, progress: 35, color: "#ff6b35", emoji: "🧪" },
+    { id: 4, title: "История", level: "8 класс", lessons: 26, progress: 65, color: "#f72585", emoji: "📜" },
+    { id: 5, title: "Биология", level: "8 класс", lessons: 24, progress: 45, color: "#39ff14", emoji: "🌱" },
+    { id: 6, title: "Информатика", level: "8 класс", lessons: 22, progress: 20, color: "#a855f7", emoji: "💻" },
+  ],
+  "9": [
+    { id: 1, title: "Алгебра", level: "9 класс", lessons: 44, progress: 25, color: "#a855f7", emoji: "📐" },
+    { id: 2, title: "Физика", level: "9 класс", lessons: 36, progress: 35, color: "#00f5ff", emoji: "⚛️" },
+    { id: 3, title: "Химия", level: "9 класс", lessons: 30, progress: 30, color: "#ff6b35", emoji: "🧪" },
+    { id: 4, title: "Биология", level: "9 класс", lessons: 28, progress: 40, color: "#39ff14", emoji: "🌱" },
+    { id: 5, title: "Обществознание", level: "9 класс", lessons: 24, progress: 55, color: "#f72585", emoji: "🏛️" },
+    { id: 6, title: "Информатика", level: "9 класс", lessons: 26, progress: 15, color: "#a855f7", emoji: "💻" },
+  ],
+};
+
+const courses = allCourses["4"];
 
 const lessons = [
   { id: 1, course: "Математика", title: "Производные функций", duration: "45 мин", done: true, emoji: "🧮" },
@@ -265,38 +309,46 @@ function ProgressPage() {
 }
 
 function CoursesPage({ setPage }: { setPage: (p: Page) => void }) {
-  const [filter, setFilter] = useState("all");
-  const filters = [
-    { id: "all", label: "Все" },
-    { id: "base", label: "Базовый" },
-    { id: "mid", label: "Средний" },
-    { id: "adv", label: "Продвинутый" },
-  ];
+  const [selectedClass, setSelectedClass] = useState("4");
+  const grades = ["4", "5", "6", "7", "8", "9"];
+  const visibleCourses = allCourses[selectedClass] ?? [];
 
   return (
     <div className="animate-fade-in">
-      <div className="mb-4">
-        <img src={COURSES_IMAGE} alt="Courses" className="w-full h-36 object-cover rounded-2xl opacity-60" />
+      {/* Баннер */}
+      <div className="mb-5 relative overflow-hidden rounded-2xl">
+        <img src={COURSES_IMAGE} alt="Courses" className="w-full h-28 object-cover opacity-50" />
+        <div className="absolute inset-0 flex items-center px-5 bg-gradient-to-r from-background/80 to-transparent">
+          <div>
+            <p className="font-body text-xs text-purple-300 mb-0.5">Выбери свой класс</p>
+            <h2 className="font-display text-xl font-bold text-white">{selectedClass} класс</h2>
+          </div>
+        </div>
       </div>
 
-      <div className="flex gap-2 mb-5 overflow-x-auto pb-1">
-        {filters.map((f) => (
-          <button
-            key={f.id}
-            onClick={() => setFilter(f.id)}
-            className={`flex-shrink-0 px-4 py-1.5 rounded-full font-body text-sm font-medium transition-all ${
-              filter === f.id
-                ? "bg-purple-500 text-white"
-                : "bg-white/10 text-gray-400 hover:bg-white/15"
-            }`}
-          >
-            {f.label}
-          </button>
-        ))}
+      {/* Переключатель классов */}
+      <div className="gradient-border rounded-2xl p-3 mb-5">
+        <p className="font-body text-xs text-gray-500 mb-2 px-1">Класс</p>
+        <div className="grid grid-cols-6 gap-1.5">
+          {grades.map((g) => (
+            <button
+              key={g}
+              onClick={() => setSelectedClass(g)}
+              className={`py-2 rounded-xl font-display text-sm font-bold transition-all duration-200 ${
+                selectedClass === g
+                  ? "bg-gradient-to-br from-purple-600 to-cyan-500 text-white shadow-lg shadow-purple-500/30"
+                  : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-gray-200"
+              }`}
+            >
+              {g}
+            </button>
+          ))}
+        </div>
       </div>
 
+      {/* Список курсов */}
       <div className="grid grid-cols-2 gap-3">
-        {courses.map((c) => (
+        {visibleCourses.map((c) => (
           <div
             key={c.id}
             onClick={() => setPage("lessons")}
@@ -311,7 +363,7 @@ function CoursesPage({ setPage }: { setPage: (p: Page) => void }) {
             <h3 className="font-display text-sm font-semibold text-white mb-1">{c.title}</h3>
             <p className="font-body text-xs text-gray-500 mb-3">{c.level} · {c.lessons} уроков</p>
             <ProgressBar value={c.progress} color={c.color} />
-            <div className="flex justify-between mt-2">
+            <div className="mt-2">
               <span className="font-body text-xs text-gray-600">{c.progress}% пройдено</span>
             </div>
           </div>
