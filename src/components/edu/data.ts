@@ -74,33 +74,58 @@ export const lessons = [
   { id: 5, course: "Литература", title: "Сказки Пушкина", duration: "30 мин", done: true, emoji: "📖" },
 ];
 
-export const quizQuestions = [
-  {
-    question: "Сколько будет 8 × 7?",
-    options: ["54", "56", "48", "63"],
-    correct: 1,
-  },
-  {
-    question: "Какое слово является именем существительным?",
-    options: ["Бежать", "Красивый", "Школа", "Быстро"],
-    correct: 2,
-  },
-  {
-    question: "Столица России — это...",
-    options: ["Санкт-Петербург", "Новосибирск", "Казань", "Москва"],
-    correct: 3,
-  },
-  {
-    question: "Сколько сантиметров в 1 метре?",
-    options: ["10", "1000", "100", "50"],
-    correct: 2,
-  },
-  {
-    question: "Как по-английски будет «кошка»?",
-    options: ["Dog", "Cat", "Bird", "Fish"],
-    correct: 1,
-  },
-];
+export interface QuizQuestion {
+  question: string;
+  options: string[];
+  correct: number;
+}
+
+export const allQuizQuestions: Record<string, QuizQuestion[]> = {
+  "4": [
+    { question: "Сколько будет 8 × 7?", options: ["54", "56", "48", "63"], correct: 1 },
+    { question: "Какое слово является именем существительным?", options: ["Бежать", "Красивый", "Школа", "Быстро"], correct: 2 },
+    { question: "Столица России — это...", options: ["Санкт-Петербург", "Новосибирск", "Казань", "Москва"], correct: 3 },
+    { question: "Сколько сантиметров в 1 метре?", options: ["10", "1000", "100", "50"], correct: 2 },
+    { question: "Как по-английски будет «кошка»?", options: ["Dog", "Cat", "Bird", "Fish"], correct: 1 },
+  ],
+  "5": [
+    { question: "Сколько будет 15 × 12?", options: ["170", "180", "175", "165"], correct: 1 },
+    { question: "Какое из чисел является простым?", options: ["9", "15", "17", "21"], correct: 2 },
+    { question: "Как называется наука о живой природе?", options: ["Физика", "Химия", "Биология", "География"], correct: 2 },
+    { question: "Сколько материков на Земле?", options: ["5", "6", "7", "8"], correct: 1 },
+    { question: "Как по-английски «школа»?", options: ["Home", "Book", "School", "Table"], correct: 2 },
+  ],
+  "6": [
+    { question: "Чему равно 2⁵?", options: ["10", "16", "32", "64"], correct: 2 },
+    { question: "Как называется наименьшее общее кратное?", options: ["НОД", "НОК", "МНК", "ОКН"], correct: 1 },
+    { question: "Кто такие декабристы?", options: ["Учёные XIX века", "Участники восстания 1825 года", "Крестьяне", "Торговцы"], correct: 1 },
+    { question: "Что изучает ботаника?", options: ["Животных", "Растения", "Минералы", "Звёзды"], correct: 1 },
+    { question: "Как по-английски «библиотека»?", options: ["Laboratory", "Library", "Lobby", "Lottery"], correct: 1 },
+  ],
+  "7": [
+    { question: "Чему равно x в уравнении 3x + 6 = 15?", options: ["2", "3", "4", "5"], correct: 1 },
+    { question: "Что такое молекула?", options: ["Атом вещества", "Наименьшая частица вещества", "Электрон", "Ядро атома"], correct: 1 },
+    { question: "В каком году было Куликовское сражение?", options: ["1240", "1380", "1480", "1612"], correct: 1 },
+    { question: "Как называется процесс фотосинтеза у растений?", options: ["Дыхание", "Питание светом", "Испарение", "Рост"], correct: 1 },
+    { question: "Что означает «I have been studying»?", options: ["Я учился", "Я учусь", "Я учился (и продолжаю)", "Я буду учиться"], correct: 2 },
+  ],
+  "8": [
+    { question: "Чему равен sin 30°?", options: ["1", "0,5", "√2/2", "√3/2"], correct: 1 },
+    { question: "Единица силы в СИ — это...", options: ["Джоуль", "Ватт", "Ньютон", "Паскаль"], correct: 2 },
+    { question: "Формула серной кислоты?", options: ["HCl", "HNO₃", "H₂SO₄", "H₃PO₄"], correct: 2 },
+    { question: "Что такое фотосинтез?", options: ["Дыхание клетки", "Синтез органики на свету", "Деление клетки", "Рост корня"], correct: 1 },
+    { question: "Что такое ВВП страны?", options: ["Военные расходы", "Стоимость всех товаров и услуг", "Налоговые доходы", "Внешний долг"], correct: 1 },
+  ],
+  "9": [
+    { question: "Чему равен корень уравнения x² - 9 = 0?", options: ["3", "±3", "9", "±9"], correct: 1 },
+    { question: "Закон Ома: I = ...", options: ["U × R", "U / R", "R / U", "U + R"], correct: 1 },
+    { question: "Чему равна молярная масса воды (H₂O)?", options: ["16 г/моль", "18 г/моль", "20 г/моль", "14 г/моль"], correct: 1 },
+    { question: "ДНК расшифровывается как...", options: ["Дезоксирибонуклеиновая кислота", "Динитрокислота", "Дибромкислота", "Диоксинуклеин"], correct: 0 },
+    { question: "Конституция РФ принята в...", options: ["1991", "1992", "1993", "1995"], correct: 2 },
+  ],
+};
+
+export const quizQuestions = allQuizQuestions["4"];
 
 export const navItems = [
   { id: "home" as Page, icon: "Home", label: "Главная" },
