@@ -67,27 +67,37 @@ export const allCourses: Record<string, Course[]> = {
 export const courses = allCourses["4"];
 
 export const lessons = [
-  { id: 1, course: "Математика", title: "Производные функций", duration: "45 мин", done: true, emoji: "🧮" },
-  { id: 2, course: "Физика", title: "Законы Ньютона", duration: "30 мин", done: true, emoji: "⚛️" },
-  { id: 3, course: "Программирование", title: "React хуки", duration: "60 мин", done: false, emoji: "💻" },
-  { id: 4, course: "Английский", title: "Past Perfect Tense", duration: "25 мин", done: false, emoji: "🌍" },
-  { id: 5, course: "История", title: "Первая мировая война", duration: "40 мин", done: true, emoji: "📜" },
+  { id: 1, course: "Математика", title: "Умножение на однозначное число", duration: "20 мин", done: true, emoji: "🧮" },
+  { id: 2, course: "Русский язык", title: "Имя существительное", duration: "25 мин", done: true, emoji: "✏️" },
+  { id: 3, course: "Окружающий мир", title: "Природные зоны России", duration: "20 мин", done: false, emoji: "🌍" },
+  { id: 4, course: "Английский", title: "Числа от 1 до 20", duration: "15 мин", done: false, emoji: "🗣️" },
+  { id: 5, course: "Литература", title: "Сказки Пушкина", duration: "30 мин", done: true, emoji: "📖" },
 ];
 
 export const quizQuestions = [
   {
-    question: "Чему равна производная функции f(x) = x²?",
-    options: ["x", "2x", "x²", "2"],
+    question: "Сколько будет 8 × 7?",
+    options: ["54", "56", "48", "63"],
     correct: 1,
   },
   {
-    question: "Какой закон описывает связь силы, массы и ускорения?",
-    options: ["Закон всемирного тяготения", "Первый закон Ньютона", "Второй закон Ньютона", "Закон Архимеда"],
+    question: "Какое слово является именем существительным?",
+    options: ["Бежать", "Красивый", "Школа", "Быстро"],
     correct: 2,
   },
   {
-    question: "В каком году началась Первая мировая война?",
-    options: ["1912", "1914", "1916", "1918"],
+    question: "Столица России — это...",
+    options: ["Санкт-Петербург", "Новосибирск", "Казань", "Москва"],
+    correct: 3,
+  },
+  {
+    question: "Сколько сантиметров в 1 метре?",
+    options: ["10", "1000", "100", "50"],
+    correct: 2,
+  },
+  {
+    question: "Как по-английски будет «кошка»?",
+    options: ["Dog", "Cat", "Bird", "Fish"],
     correct: 1,
   },
 ];
